@@ -1,11 +1,18 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import exercises from "./assets/data/exercises.json";
 
 export default function App() {
+  // console.log(exercises[0]);
+  const exercise = exercises[0];
   return (
     <View style={styles.container}>
-      <Text>Hello World</Text>
-      <Text>My first Native App 0012</Text>
+      <Text style={{ fontSize: 16, fontWeight: "bold" }}>{exercise.name}</Text>
+      <Text>{exercise.type}</Text>
+      <Text>{exercise.muscle}</Text>
+      <Text>{exercise.equipment}</Text>
+      <Text>{exercise.difficulty}</Text>
+      <Text>{exercise.instructions}</Text>
       <StatusBar style="auto" />
     </View>
   );
